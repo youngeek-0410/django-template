@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "debug_toolbar",
     "core",
+    "account",
 ]
 
 MIDDLEWARE = [
@@ -116,6 +117,11 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+# auth user model
+AUTH_USER_MODEL = "account.User"
+
 
 # Debug toolbar
 DEBUG_TOOLBAR_PANELS = [
