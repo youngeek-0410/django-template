@@ -4,7 +4,7 @@ services:
     build: ./django
     volumes:
       - ./django:/code
-      # - ./django/static:/code/static
+      - ./django/static:/code/static
     expose:
       - 8000
     env_file:
@@ -25,7 +25,7 @@ services:
     depends_on:
       - django
     volumes:
-      # - ./django/static:/code/static
+      - ./django/static:/code/static
       - ./nginx/uwsgi_params:/etc/nginx/uwsgi_params
 volumes:
   postgres_data:
